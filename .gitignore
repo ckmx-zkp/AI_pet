@@ -1,0 +1,37 @@
+# 依赖与虚拟环境
+**/node_modules/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.cache/
+
+# 构建产物
+**/dist/
+**/build/
+**/.vite/
+ESP32_XIAOZHI/xiaozhi-esp32/managed_components/
+ESP32_XIAOZHI/xiaozhi-esp32/build/
+ai-pet-backend/*.bundle
+
+# 密钥与本机凭据（服务器密钥仍只放服务器 .env）
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.production
+DEPLOYMENT_ACCESS.local.md
+**/DEPLOYMENT_ACCESS.local.md
+**/*.pem
+id_rsa
+id_rsa.pub
+**/htpasswd.raw
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

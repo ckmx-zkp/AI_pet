@@ -1,0 +1,21 @@
+[submodule "ai-pet-backend"]
+	path = ai-pet-backend
+	url = https://github.com/ckmx-zkp/ai-pet-backend.git
+[submodule "ai-pet-admin"]
+	path = ai-pet-admin
+	url = https://github.com/ckmx-zkp/ai-pet-admin.git
+[submodule "ai-pet-app"]
+	path = ai-pet-app
+	url = https://github.com/ckmx-zkp/ai-pet-app-.git
+[submodule "xiaozhi-server"]
+	path = xiaozhi-server
+	url = https://github.com/ckmx-zkp/aipet-xiaozhi-server-
+[submodule "work_dashboard"]
+	path = work_dashboard
+	url = https://github.com/ckmx-zkp/work_dashboard.git
+[submodule "prototype"]
+	path = prototype
+	url = https://github.com/ckmx-zkp/AIPET_prototype.git
+[submodule "xiaozhi-esp32"]
+	path = ESP32_XIAOZHI/xiaozhi-esp32
+	url = https://github.com/ckmx-zkp/Tboy_P4_xiaozhi.git

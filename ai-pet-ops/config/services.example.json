@@ -1,0 +1,27 @@
+{
+  "http_checks": [
+    {"name": "backend-healthz", "url": "http://127.0.0.1:8010/healthz", "expected_status": 200},
+    {"name": "admin-web", "url": "http://127.0.0.1:8080/", "expected_status": 200},
+    {"name": "app-web", "url": "http://127.0.0.1:8081/", "expected_status": 200},
+    {"name": "xiaozhi-web", "url": "http://127.0.0.1:8002/", "expected_status": 200}
+  ],
+  "expected_containers": [
+    "ai-pet-backend-web-api-1",
+    "ai-pet-backend-agent-worker-1",
+    "ai-pet-backend-memory-mcp-1",
+    "ai-pet-backend-postgres-1",
+    "ai-pet-backend-redis-1",
+    "ai-pet-admin-web",
+    "ai-pet-app-web",
+    "xiaozhi-esp32-server",
+    "xiaozhi-esp32-server-web",
+    "xiaozhi-esp32-server-db",
+    "xiaozhi-esp32-server-redis",
+    "kanban-web"
+  ],
+  "thresholds": {
+    "root_disk_used_percent_warning": 80,
+    "root_disk_used_percent_critical": 90,
+    "http_timeout_seconds": 5
+  }
+}

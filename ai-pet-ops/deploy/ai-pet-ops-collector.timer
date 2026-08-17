@@ -1,0 +1,12 @@
+[Unit]
+Description=每五分钟采集一次 AI Pet 运维状态
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Persistent=true
+Unit=ai-pet-ops-collector.service
+
+[Install]
+WantedBy=timers.target
+

@@ -1,0 +1,545 @@
+﻿Executing action: all (aliases: build)
+Running ninja in directory D:\Home_Work\ESP32_XIAOZHI\xiaozhi-esp32\build
+Executing "ninja all"...
+[1/10] Performing build step for 'bootloader'
+
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\Home_Work\ESP32_XIAOZHI\xiaozhi-esp32\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/v5.5.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x2000 D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build/bootloader/bootloader.bin"
+
+
+Bootloader binary size 0x46c0 bytes. 0x1940 bytes (26%) free.
+
+
+
+[2/10] No install step for 'bootloader'
+
+[3/10] Completed 'bootloader'
+
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/boards/waveshare/esp32-p4-ai-pet/pet_eye_display.cc.obj
+
+[5/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/boards/waveshare/esp32-p4-ai-pet/esp32-p4-ai-pet.cc.obj
+
+In file included from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/managed_components/espressif__esp_video/include/linux/videodev2.h:62,
+                 from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/main/display/lvgl_display/jpg/image_to_jpeg.h:12,
+                 from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/main/boards/common/esp_video.h:13,
+                 from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/main/boards/waveshare/esp32-p4-ai-pet/esp32-p4-ai-pet.cc:9:
+D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/managed_components/espressif__esp_video/include/linux/ioctl.h:54:9: warning: "_IO" redefined
+   54 | #define _IO(type,nr)        _IOC(_IOC_NONE,(type),(nr),0)
+      |         ^~~
+In file included from D:/v5.5.2/esp-idf/components/lwip/include/lwip/sockets.h:8,
+                 from D:/v5.5.2/esp-idf/components/lwip/port/esp32xx/include/sys/socket.h:15,
+                 from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/main/audio/processors/audio_debugger.h:7,
+                 from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/main/audio/audio_service.h:23,
+                 from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/main/application.h:17,
+                 from D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/main/boards/waveshare/esp32-p4-ai-pet/esp32-p4-ai-pet.cc:3:
+D:/v5.5.2/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:419:9: note: this is the location of the previous definition
+  419 | #define _IO(x,y)        ((long)(IOC_VOID|((x)<<8)|(y)))
+      |         ^~~
+D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/managed_components/espressif__esp_video/include/linux/ioctl.h:55:9: warning: "_IOR" redefined
+   55 | #define _IOR(type,nr,size)  _IOC(_IOC_READ,(type),(nr),(_IOC_TYPECHECK(size)))
+      |         ^~~~
+D:/v5.5.2/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:421:9: note: this is the location of the previous definition
+  421 | #define _IOR(x,y,t)     ((long)(IOC_OUT|((sizeof(t)&IOCPARM_MASK)<<16)|((x)<<8)|(y)))
+      |         ^~~~
+D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/managed_components/espressif__esp_video/include/linux/ioctl.h:56:9: warning: "_IOW" redefined
+
+   56 | #define _IOW(type,nr,size)  _IOC(_IOC_WRITE,(type),(nr),(_IOC_TYPECHECK(size)))
+
+      |         ^~~~
+
+D:/v5.5.2/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:423:9: note: this is the location of the previous definition
+
+  423 | #define _IOW(x,y,t)     ((long)(IOC_IN|((sizeof(t)&IOCPARM_MASK)<<16)|((x)<<8)|(y)))
+
+      |         ^~~~
+
+[6/10] Linking C static library esp-idf\main\libmain.a
+
+[7/10] Generating esp-idf/esp_system/ld/sections.ld
+
+[8/10] Linking CXX executable xiaozhi.elf
+
+[9/10] Generating binary image from built executable
+
+esptool.py v4.11.dev2
+
+
+Creating esp32p4 image...
+
+
+Merged 4 ELF sections
+
+
+Successfully created esp32p4 image.
+
+
+Generated D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build/xiaozhi.bin
+
+[10/10] C:\Windows\system32\cmd.exe /C "cd /D D:\Home_Work\ESP32_XIAOZHI\xiaozhi-esp32\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/v5.5.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build/partition_table/partition-table.bin D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build/xiaozhi.bin"
+
+xiaozhi.bin binary size 0x2b4580 bytes. Smallest app partition is 0x400000 bytes. 0x14ba80 bytes (32%) free.
+
+
+Executing action: flash
+Running ninja in directory D:\Home_Work\ESP32_XIAOZHI\xiaozhi-esp32\build
+Executing "ninja flash"...
+[1/5] C:\Windows\system32\cmd.exe /C "cd /D D:\Home_Work\ESP32_XIAOZHI\xiaozhi-esp32\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/v5.5.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build/partition_table/partition-table.bin D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build/xiaozhi.bin"
+
+xiaozhi.bin binary size 0x2b4580 bytes. Smallest app partition is 0x400000 bytes. 0x14ba80 bytes (32%) free.
+
+
+[2/5] Performing build step for 'bootloader'
+
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\Home_Work\ESP32_XIAOZHI\xiaozhi-esp32\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/v5.5.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x2000 D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build/bootloader/bootloader.bin"
+
+
+Bootloader binary size 0x46c0 bytes. 0x1940 bytes (26%) free.
+
+
+
+[3/5] No install step for 'bootloader'
+
+[4/5] Completed 'bootloader'
+
+[4/5] C:\Windows\system32\cmd.exe /C "cd /D D:\v5.5.2\esp-idf\components\esptool_py && D:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=D:/v5.5.2/esp-idf -D SERIAL_TOOL=D:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;D:/v5.5.2/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32p4 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Home_Work/ESP32_XIAOZHI/xiaozhi-esp32/build -P D:/v5.5.2/esp-idf/components/esptool_py/run_serial_tool.cmake"
+
+esptool.py --chip esp32p4 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 32MB 0x2000 bootloader/bootloader.bin 0x200000 xiaozhi.bin 0x8000 partition_table/partition-table.bin 0x10d000 ota_data_initial.bin 0xa00000 generated_assets.bin
+
+esptool.py v4.11.dev2
+
+Serial port COM3
+
+Connecting....
+
+Chip is ESP32-P4 (revision v1.3)
+
+Features: High-Performance MCU
+
+Crystal is 40MHz
+
+MAC: 80:f1:b2:d3:bc:a4
+
+Uploading stub...
+
+Running stub...
+
+Stub running...
+
+Changing baud rate to 460800
+
+Changed.
+
+Configuring flash size...
+
+Flash will be erased from 0x00002000 to 0x00006fff...
+
+Flash will be erased from 0x00200000 to 0x004b4fff...
+
+Flash will be erased from 0x00008000 to 0x00008fff...
+
+Flash will be erased from 0x0010d000 to 0x0010efff...
+
+Flash will be erased from 0x00a00000 to 0x00cb8fff...
+
+SHA digest in image updated
+
+Compressed 18112 bytes to 12442...
+
+Writing at 0x00002000... (100 %)
+
+Wrote 18112 bytes (12442 compressed) at 0x00002000 in 0.5 seconds (effective 307.8 kbit/s)...
+
+Hash of data verified.
+
+Compressed 2835840 bytes to 1538350...
+
+Writing at 0x00200000... (1 %)
+
+Writing at 0x0020deb8... (2 %)
+
+Writing at 0x0021a81d... (3 %)
+
+Writing at 0x00229d49... (4 %)
+
+Writing at 0x00237a78... (5 %)
+
+Writing at 0x00244cc5... (6 %)
+
+Writing at 0x00249da9... (7 %)
+
+Writing at 0x0024df28... (8 %)
+
+Writing at 0x002530fe... (9 %)
+
+Writing at 0x00263446... (10 %)
+
+Writing at 0x00267c95... (11 %)
+
+Writing at 0x0026e939... (12 %)
+
+Writing at 0x00274846... (13 %)
+
+Writing at 0x0027a156... (14 %)
+
+Writing at 0x0027efa4... (15 %)
+
+Writing at 0x0028411c... (17 %)
+
+Writing at 0x0028ae50... (18 %)
+
+Writing at 0x00294320... (19 %)
+
+Writing at 0x0029bcc9... (20 %)
+
+Writing at 0x002a5c83... (21 %)
+
+Writing at 0x002b2ce4... (22 %)
+
+Writing at 0x002b8cb0... (23 %)
+
+Writing at 0x002beb9e... (24 %)
+
+Writing at 0x002c4a62... (25 %)
+
+Writing at 0x002cbd95... (26 %)
+
+Writing at 0x002d43b9... (27 %)
+
+Writing at 0x002db671... (28 %)
+
+Writing at 0x002e1a5e... (29 %)
+
+Writing at 0x002e8661... (30 %)
+
+Writing at 0x002eef55... (31 %)
+
+Writing at 0x002f5c47... (32 %)
+
+Writing at 0x002fc238... (34 %)
+
+Writing at 0x003028c1... (35 %)
+
+Writing at 0x003090cb... (36 %)
+
+Writing at 0x0030fc88... (37 %)
+
+Writing at 0x00315ed8... (38 %)
+
+Writing at 0x0031cb5c... (39 %)
+
+Writing at 0x003233e5... (40 %)
+
+Writing at 0x0032a025... (41 %)
+
+Writing at 0x0032fcb8... (42 %)
+
+Writing at 0x00335684... (43 %)
+
+Writing at 0x0033ae71... (44 %)
+
+Writing at 0x00341fb8... (45 %)
+
+Writing at 0x0034829e... (46 %)
+
+Writing at 0x0034ffc8... (47 %)
+
+Writing at 0x003554a4... (48 %)
+
+Writing at 0x0037f6fd... (50 %)
+
+Writing at 0x00385a8e... (51 %)
+
+Writing at 0x0038ce36... (52 %)
+
+Writing at 0x00394736... (53 %)
+
+Writing at 0x0039cb53... (54 %)
+
+Writing at 0x003a31f5... (55 %)
+
+Writing at 0x003a8521... (56 %)
+
+Writing at 0x003ad91e... (57 %)
+
+Writing at 0x003b2c07... (58 %)
+
+Writing at 0x003b7f61... (59 %)
+
+Writing at 0x003bd57c... (60 %)
+
+Writing at 0x003c27a1... (61 %)
+
+Writing at 0x003c7b59... (62 %)
+
+Writing at 0x003ccd9f... (63 %)
+
+Writing at 0x003d3db7... (64 %)
+
+Writing at 0x003df210... (65 %)
+
+Writing at 0x003e4e48... (67 %)
+
+Writing at 0x003ef94a... (68 %)
+
+Writing at 0x003f629b... (69 %)
+
+Writing at 0x003fc1eb... (70 %)
+
+Writing at 0x00401edf... (71 %)
+
+Writing at 0x00407fc8... (72 %)
+
+Writing at 0x0040dc72... (73 %)
+
+Writing at 0x00413cf2... (74 %)
+
+Writing at 0x0041a4e0... (75 %)
+
+Writing at 0x00421a98... (76 %)
+
+Writing at 0x00427f90... (77 %)
+
+Writing at 0x0042ea57... (78 %)
+
+Writing at 0x0043534c... (79 %)
+
+Writing at 0x0043acaf... (80 %)
+
+Writing at 0x004406f2... (81 %)
+
+Writing at 0x004464a9... (82 %)
+
+Writing at 0x0044bf20... (84 %)
+
+Writing at 0x0045154a... (85 %)
+
+Writing at 0x00456f84... (86 %)
+
+Writing at 0x0045c9af... (87 %)
+
+Writing at 0x004647cb... (88 %)
+
+Writing at 0x0046bff4... (89 %)
+
+Writing at 0x00473234... (90 %)
+
+Writing at 0x0047adad... (91 %)
+
+Writing at 0x004814d2... (92 %)
+
+Writing at 0x004871be... (93 %)
+
+Writing at 0x0048d181... (94 %)
+
+Writing at 0x00492dfd... (95 %)
+
+Writing at 0x0049950d... (96 %)
+
+Writing at 0x004a0163... (97 %)
+
+Writing at 0x004a6674... (98 %)
+
+Writing at 0x004ac704... (100 %)
+
+Wrote 2835840 bytes (1538350 compressed) at 0x00200000 in 37.4 seconds (effective 606.2 kbit/s)...
+
+Hash of data verified.
+
+Compressed 3072 bytes to 158...
+
+Writing at 0x00008000... (100 %)
+
+Wrote 3072 bytes (158 compressed) at 0x00008000 in 0.0 seconds (effective 591.1 kbit/s)...
+
+Hash of data verified.
+
+Compressed 8192 bytes to 31...
+
+Writing at 0x0010d000... (100 %)
+
+Wrote 8192 bytes (31 compressed) at 0x0010d000 in 0.1 seconds (effective 1034.8 kbit/s)...
+
+Hash of data verified.
+
+Compressed 2851768 bytes to 1382617...
+
+Writing at 0x00a00000... (1 %)
+
+Writing at 0x00a13e93... (2 %)
+
+Writing at 0x00a1fadc... (3 %)
+
+Writing at 0x00a2a642... (4 %)
+
+Writing at 0x00a36baf... (5 %)
+
+Writing at 0x00a40a8e... (7 %)
+
+Writing at 0x00a495f9... (8 %)
+
+Writing at 0x00a52c07... (9 %)
+
+Writing at 0x00a5b568... (10 %)
+
+Writing at 0x00a64e56... (11 %)
+
+Writing at 0x00a6f893... (12 %)
+
+Writing at 0x00a786e3... (14 %)
+
+Writing at 0x00a816ec... (15 %)
+
+Writing at 0x00a8ac26... (16 %)
+
+Writing at 0x00a928be... (17 %)
+
+Writing at 0x00a9b86c... (18 %)
+
+Writing at 0x00aa5148... (20 %)
+
+Writing at 0x00aaed91... (21 %)
+
+Writing at 0x00ab710a... (22 %)
+
+Writing at 0x00abfdbe... (23 %)
+
+Writing at 0x00ac76dc... (24 %)
+
+Writing at 0x00ad022d... (25 %)
+
+Writing at 0x00ad8b0c... (27 %)
+
+Writing at 0x00ae076a... (28 %)
+
+Writing at 0x00ae808c... (29 %)
+
+Writing at 0x00af1f4e... (30 %)
+
+Writing at 0x00afaf54... (31 %)
+
+Writing at 0x00b02df0... (32 %)
+
+Writing at 0x00b0a829... (34 %)
+
+Writing at 0x00b1387f... (35 %)
+
+Writing at 0x00b1bd2c... (36 %)
+
+Writing at 0x00b23a1e... (37 %)
+
+Writing at 0x00b2b117... (38 %)
+
+Writing at 0x00b32a52... (40 %)
+
+Writing at 0x00b3aa7e... (41 %)
+
+Writing at 0x00b439bb... (42 %)
+
+Writing at 0x00b4c2f1... (43 %)
+
+Writing at 0x00b55050... (44 %)
+
+Writing at 0x00b5d5ca... (45 %)
+
+Writing at 0x00b65b23... (47 %)
+
+Writing at 0x00b6d36f... (48 %)
+
+Writing at 0x00b73ec6... (49 %)
+
+Writing at 0x00b7ba8d... (50 %)
+
+Writing at 0x00b83f38... (51 %)
+
+Writing at 0x00b8c1f8... (52 %)
+
+Writing at 0x00b95352... (54 %)
+
+Writing at 0x00b9eb6b... (55 %)
+
+Writing at 0x00ba6f52... (56 %)
+
+Writing at 0x00baf101... (57 %)
+
+Writing at 0x00bb7a93... (58 %)
+
+Writing at 0x00bc071b... (60 %)
+
+Writing at 0x00bc8fca... (61 %)
+
+Writing at 0x00bd0f32... (62 %)
+
+Writing at 0x00bd9115... (63 %)
+
+Writing at 0x00be1c03... (64 %)
+
+Writing at 0x00be9a4b... (65 %)
+
+Writing at 0x00bf1552... (67 %)
+
+Writing at 0x00bf9b0e... (68 %)
+
+Writing at 0x00c019da... (69 %)
+
+Writing at 0x00c09be7... (70 %)
+
+Writing at 0x00c11366... (71 %)
+
+Writing at 0x00c18cf5... (72 %)
+
+Writing at 0x00c240e6... (74 %)
+
+Writing at 0x00c341da... (75 %)
+
+Writing at 0x00c4217b... (76 %)
+
+Writing at 0x00c4d4f4... (77 %)
+
+Writing at 0x00c5ca15... (78 %)
+
+Writing at 0x00c62df0... (80 %)
+
+Writing at 0x00c67cac... (81 %)
+
+Writing at 0x00c6d35a... (82 %)
+
+Writing at 0x00c71fef... (83 %)
+
+Writing at 0x00c765ea... (84 %)
+
+Writing at 0x00c7b33f... (85 %)
+
+Writing at 0x00c80b2f... (87 %)
+
+Writing at 0x00c85e58... (88 %)
+
+Writing at 0x00c8b8fc... (89 %)
+
+Writing at 0x00c9143f... (90 %)
+
+Writing at 0x00c96467... (91 %)
+
+Writing at 0x00c9ac00... (92 %)
+
+Writing at 0x00c9fad1... (94 %)
+
+Writing at 0x00ca5571... (95 %)
+
+Writing at 0x00caa6aa... (96 %)
+
+Writing at 0x00cae73b... (97 %)
+
+Writing at 0x00cb28bf... (98 %)
+
+Writing at 0x00cb6a4b... (100 %)
+
+Wrote 2851768 bytes (1382617 compressed) at 0x00a00000 in 33.4 seconds (effective 682.2 kbit/s)...
+
+Hash of data verified.
+
+
+
+Leaving...
+
+Hard resetting via RTS pin...
+
+Done

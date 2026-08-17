@@ -1,0 +1,9 @@
+{
+  "name": "ai-pet-doc-pdf",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "marked": "^15.0.12",
+    "puppeteer": "^24.12.1"
+  }
+}

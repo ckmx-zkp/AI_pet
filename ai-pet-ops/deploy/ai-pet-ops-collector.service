@@ -1,0 +1,18 @@
+[Unit]
+Description=AI Pet 运维状态采集器
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/ai-pet/ai-pet-ops
+ExecStart=/usr/bin/python3 /opt/ai-pet/ai-pet-ops/collector/collect_status.py --config /etc/ai-pet-ops/services.json --output /var/lib/ai-pet-ops/status.json
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ProtectClock=true
+ReadWritePaths=/var/lib/ai-pet-ops
+
