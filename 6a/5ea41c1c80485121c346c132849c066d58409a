@@ -1,0 +1,43 @@
+docs/AI-Pet当前状态分类清单-2026-08-18.md
+  s_ada4240553a2f0::t_4007f599bf8302 1-221,225-347
+  s_ada4240553a2f0::t_f0eac8e518611a 222
+  s_ada4240553a2f0::t_0c84fd88920dd2 223-224
+README.md
+  s_ada4240553a2f0::t_c767f35df7e92f 31-40
+ESP32_XIAOZHI/xiaozhi-esp32
+  s_eb774045fc6449::t_37df6c2d6edc55 1
+ai-pet-admin
+  s_eb774045fc6449::t_38cc890ca2d523 1
+ai-pet-app
+  s_eb774045fc6449::t_6e9bd2ff1125ad 1
+ai-pet-backend
+  s_eb774045fc6449::t_53682706cf111b 1
+work_dashboard
+  s_eb774045fc6449::t_f6b1ee4cbd2cbb 1
+xiaozhi-server
+  s_eb774045fc6449::t_fed94c4eb7a1b6 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "6a5ea41c1c80485121c346c132849c066d58409a",
+  "prompts": {},
+  "sessions": {
+    "s_ada4240553a2f0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a01302-988c-7402-9070-52b689d4c5ca",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    },
+    "s_eb774045fc6449": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a012ed-0c1b-7c40-9478-ca5dd94206e1",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    }
+  }
+}
