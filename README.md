@@ -28,6 +28,16 @@ cd Home_Work
 git submodule update --init --recursive
 ```
 
+另一台电脑已有工作区时，依次执行：
+
+```bash
+git pull --ff-only
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
+这会把每个子仓更新到总仓本次记录的精确提交；子模块处于 detached HEAD 是正常的只读快照状态。要在某个子仓继续开发，再进入该子仓执行 `git switch main` 和 `git pull --ff-only`。
+
 Windows 也可以直接跑 `.\scripts\sync-workspace.ps1`。
 
 依赖不进 Git。各仓按自己的 `AGENTS.md` 装：
