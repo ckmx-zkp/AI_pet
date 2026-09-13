@@ -1,0 +1,6 @@
+## AI Pet S3 USB 摄像头大板硬件测试
+dependencies:
+  idf: ">=5.4.0"
+  espressif/esp_lcd_gc9a01: "^2.0.1"
+  espressif/led_strip: "^3.0.0"
+  espressif/usb_host_uvc: "^2.2.0"

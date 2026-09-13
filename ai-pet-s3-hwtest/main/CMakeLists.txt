@@ -1,0 +1,26 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "hw_common.c"
+        "test_i2c.c"
+        "test_display.c"
+        "test_led.c"
+        "test_input.c"
+        "test_servo.c"
+        "test_uart_ext.c"
+        "test_audio.c"
+        "test_wifi.c"
+        "test_pa.c"
+        "test_usb_cam.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        driver
+        esp_lcd
+        esp_wifi
+        esp_event
+        esp_netif
+        nvs_flash
+        vfs
+        usb
+        esp_psram
+)
