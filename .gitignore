@@ -32,6 +32,8 @@ id_rsa.pub
 **/htpasswd.raw
 
 # 编辑器 / 系统
+**/.obsidian/
+~$*
 .DS_Store
 Thumbs.db
 *.swp
